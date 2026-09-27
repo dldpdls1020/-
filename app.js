@@ -13,6 +13,10 @@ const copy = {
   }
 };
 
+Object.assign(copy.ko,{contactText:'전화·카카오채널·네이버 예약 중 편한 방법으로 문의해 주세요.',bookingCall:'전화로 예약 문의',kakaoInquiry:'카카오채널 문의',naverBooking:'네이버 예약 바로가기',mobileCta:'전화로 예약 문의',footerNotice:'부산 · 전화 010-7597-8444'});
+Object.assign(copy.ja,{contactText:'お電話、Kakaoチャンネル、Naver予約からお問い合わせください。',bookingCall:'電話で予約する',kakaoInquiry:'Kakaoチャンネルで相談',naverBooking:'Naver予約はこちら',mobileCta:'電話で予約する',footerNotice:'釜山 · 電話 010-7597-8444'});
+Object.assign(copy['zh-TW'],{contactText:'歡迎透過電話、Kakao頻道或 Naver 預約聯絡我們。',bookingCall:'電話預約',kakaoInquiry:'Kakao 頻道諮詢',naverBooking:'前往 Naver 預約',mobileCta:'電話預約',footerNotice:'釜山 · 電話 010-7597-8444'});
+Object.assign(copy.en,{contactText:'Contact us by phone, Kakao Channel, or Naver Booking.',bookingCall:'Call to book',kakaoInquiry:'Kakao Channel enquiry',naverBooking:'Book on Naver',mobileCta:'Call to book',footerNotice:'Busan · Phone 010-7597-8444'});
 const names={'ko':'KO','ja':'日本語','zh-TW':'繁體','en':'EN'};
 const langButtons=[...document.querySelectorAll('[data-lang]')];
 function setLanguage(lang){
@@ -35,6 +39,29 @@ document.querySelectorAll('.main-nav a').forEach(link=>link.addEventListener('cl
 let savedLanguage='ko';
 try{savedLanguage=localStorage.getItem('beautydate-language')||'ko'}catch{}
 setLanguage(savedLanguage);
+
+const galleryTrack=document.querySelector('.gallery-track');
+if(galleryTrack){
+  const casePhotos=[22,3,6,9,12,15,18,21,24,27,30,33,36,41,44];
+  const photoGroup=galleryTrack.querySelector('.gallery-group');
+  casePhotos.forEach((number,index)=>{
+    const figure=document.createElement('figure');
+    figure.className='gallery-item';
+    const image=document.createElement('img');
+    image.src=`assets/brow-${String(number).padStart(2,'0')}.jpg`;
+    image.alt=`뷰티데이트 눈썹 디자인 시술 사례 ${index+1}`;
+    image.loading='lazy';
+    image.decoding='async';
+    const caption=document.createElement('figcaption');
+    caption.innerHTML=`<span>${String(index+1).padStart(2,'0')}</span><span>BEAUTYDATE · BROW DESIGN</span>`;
+    figure.append(image,caption);
+    photoGroup.append(figure);
+  });
+  const repeatedGroup=photoGroup.cloneNode(true);
+  repeatedGroup.setAttribute('aria-hidden','true');
+  repeatedGroup.querySelectorAll('img').forEach(image=>image.alt='');
+  galleryTrack.append(repeatedGroup);
+}
 
 const header=document.querySelector('.site-header');
 const menuToggle=document.querySelector('.menu-toggle');
@@ -69,15 +96,46 @@ document.addEventListener('keydown',event=>{
   }
 });
 
-if('IntersectionObserver' in window){
+const heroStage=document.querySelector('.hero-stage');
+const heroVideo=document.querySelector('.hero-portrait video');
+if(heroStage&&heroVideo){
+  const revealVideoFrame=()=>{
+    if(heroVideo.paused||heroVideo.readyState<2)return;
+    const showVideo=()=>{if(!heroVideo.paused&&heroVideo.readyState>=2)heroStage.classList.add('video-active')};
+    if('requestVideoFrameCallback' in heroVideo)heroVideo.requestVideoFrameCallback(showVideo);
+    else window.setTimeout(showVideo,350);
+  };
+  heroVideo.addEventListener('playing',revealVideoFrame);
+  heroVideo.addEventListener('pause',()=>heroStage.classList.remove('video-active'));
+  heroVideo.addEventListener('waiting',()=>heroStage.classList.remove('video-active'));
+  if(!heroVideo.paused)revealVideoFrame();
+}
+
+if ('IntersectionObserver' in window) {
   document.body.classList.add('motion-ready');
-  const revealItems=document.querySelectorAll('.section-heading,.intro-grid h2,.intro-copy,.feature-photo,.feature-copy > *, .works-title > *, .gallery-item,.gallery-footnote,.process-grid > *, .steps article,.director-grid > *, .studio h2,.studio-gallery img,.visit-grid > *, .contact-inner > *, .site-footer > *');
-  revealItems.forEach((item,index)=>{
-    item.dataset.reveal='';
-    if(item.matches('.steps article,.gallery-item,.studio-gallery img'))item.style.setProperty('--reveal-delay',`${(index%4)*90}ms`);
+  const revealGroups = [
+    ['.hero-topline', 'rise'], ['.hero-word', 'left'],
+    ['.hero-message', 'right'], ['.hero-caption', 'rise'], ['.hero-bottom', 'rise'],
+    ['.section-heading', 'rise'],
+    ['.intro-grid h2', 'left'], ['.intro-copy', 'right'],
+    ['.feature-photo', 'image'], ['.feature-copy > *', 'right'],
+    ['.works-title > *', 'rise'], ['.gallery-item', 'image'], ['.gallery-footnote', 'rise'],
+    ['.process-grid > :first-child', 'left'], ['.steps article', 'right'],
+    ['.director-grid figure', 'image'], ['.director-copy > *', 'right'],
+    ['.studio h2', 'rise'], ['.studio-gallery img', 'image'],
+    ['.visit-grid > :first-child', 'left'], ['.visit-details > div', 'right'],
+    ['.contact-inner > *', 'zoom'], ['.site-footer > *', 'rise']
+  ];
+  const revealItems = [];
+  revealGroups.forEach(([selector, motion]) => {
+    document.querySelectorAll(selector).forEach((item, index) => {
+      item.dataset.reveal = motion;
+      item.style.setProperty('--reveal-delay', `${Math.min(index, 3) * 85}ms`);
+      revealItems.push(item);
+    });
   });
-  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}
-  }),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
-  revealItems.forEach(item=>revealObserver.observe(item));
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
+  }, { threshold: 0.16, rootMargin: '-6% 0px -8% 0px' });
+  revealItems.forEach(item => revealObserver.observe(item));
 }
