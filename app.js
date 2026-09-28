@@ -58,13 +58,26 @@ let savedLanguage='ko';
 try{savedLanguage=localStorage.getItem('beautydate-language')||'ko'}catch{}
 setLanguage(savedLanguage);
 
-const galleryTrack=document.querySelector('.gallery-track');
-if(galleryTrack){
+const treatmentGallery=document.querySelector('.treatment-gallery');
+const galleryLightbox=document.querySelector('.gallery-lightbox');
+if(treatmentGallery&&galleryLightbox){
   const casePhotos=[22,3,6,9,12,15,18,21,24,27,30,33,36,41,44];
-  const photoGroup=galleryTrack.querySelector('.gallery-group');
+  const lightboxImage=galleryLightbox.querySelector('img');
+  const lightboxCaption=galleryLightbox.querySelector('figcaption');
+  let activePhoto=0;
+  const showPhoto=index=>{
+    activePhoto=(index+casePhotos.length)%casePhotos.length;
+    const number=casePhotos[activePhoto];
+    lightboxImage.src=`assets/brow-${String(number).padStart(2,'0')}.jpg`;
+    lightboxImage.alt=`뷰티데이트 눈썹 디자인 시술 사례 ${activePhoto+1}`;
+    lightboxCaption.textContent=`${String(activePhoto+1).padStart(2,'0')} / ${String(casePhotos.length).padStart(2,'0')} · BEAUTYDATE BROW DESIGN`;
+  };
   casePhotos.forEach((number,index)=>{
     const figure=document.createElement('figure');
     figure.className='gallery-item';
+    figure.tabIndex=0;
+    figure.setAttribute('role','button');
+    figure.setAttribute('aria-label',`시술 사진 ${index+1} 크게 보기`);
     const image=document.createElement('img');
     image.src=`assets/brow-${String(number).padStart(2,'0')}.jpg`;
     image.alt=`뷰티데이트 눈썹 디자인 시술 사례 ${index+1}`;
@@ -73,12 +86,18 @@ if(galleryTrack){
     const caption=document.createElement('figcaption');
     caption.innerHTML=`<span>${String(index+1).padStart(2,'0')}</span><span>BEAUTYDATE · BROW DESIGN</span>`;
     figure.append(image,caption);
-    photoGroup.append(figure);
+    figure.addEventListener('click',()=>{showPhoto(index);galleryLightbox.showModal()});
+    figure.addEventListener('keydown',event=>{
+      if(event.key==='Enter'||event.key===' '){event.preventDefault();showPhoto(index);galleryLightbox.showModal()}
+    });
+    treatmentGallery.append(figure);
   });
-  const repeatedGroup=photoGroup.cloneNode(true);
-  repeatedGroup.setAttribute('aria-hidden','true');
-  repeatedGroup.querySelectorAll('img').forEach(image=>image.alt='');
-  galleryTrack.append(repeatedGroup);
+  galleryLightbox.querySelector('.gallery-close').addEventListener('click',()=>galleryLightbox.close());
+  galleryLightbox.querySelector('.gallery-previous').addEventListener('click',()=>showPhoto(activePhoto-1));
+  galleryLightbox.querySelector('.gallery-next').addEventListener('click',()=>showPhoto(activePhoto+1));
+  galleryLightbox.addEventListener('click',event=>{
+    if(event.target===galleryLightbox)galleryLightbox.close();
+  });
 }
 
 const header=document.querySelector('.site-header');
