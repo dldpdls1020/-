@@ -156,6 +156,9 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 .contact-actions a:hover>b{transform:translate(2px,-2px)}
 .mobile-cta a>span{font-size:inherit}.mobile-cta a>b{font-size:15px;font-weight:400}
 .hero-portrait video{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(100%) brightness(.68);opacity:1}
+.hero-portrait video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+.hero-video-play{display:none;position:absolute;z-index:4;top:50%;left:50%;width:76px;height:76px;transform:translate(-50%,-50%);place-items:center;border:1px solid #ffffffa0;border-radius:50%;background:#1119;color:#fff;font-size:25px;cursor:pointer;backdrop-filter:blur(6px)}
+.hero-portrait.autoplay-blocked .hero-video-play{display:grid}
 
 /* Booking-first homepage: keep the video clean and make the next action obvious. */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

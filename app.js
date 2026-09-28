@@ -58,6 +58,32 @@ let savedLanguage='ko';
 try{savedLanguage=localStorage.getItem('beautydate-language')||'ko'}catch{}
 setLanguage(savedLanguage);
 
+const heroVideo=document.querySelector('.hero-portrait video');
+if(heroVideo){
+  const heroPortrait=heroVideo.closest('.hero-portrait');
+  const playHeroVideo=()=>{
+    if(document.visibilityState==='hidden')return;
+    heroVideo.muted=true;
+    heroVideo.defaultMuted=true;
+    heroVideo.playsInline=true;
+    const attempt=heroVideo.play();
+    if(attempt&&typeof attempt.then==='function'){
+      attempt.then(()=>heroPortrait.classList.remove('autoplay-blocked'))
+        .catch(()=>heroPortrait.classList.add('autoplay-blocked'));
+    }
+  };
+  heroVideo.addEventListener('playing',()=>heroPortrait.classList.remove('autoplay-blocked'));
+  heroVideo.addEventListener('canplay',playHeroVideo,{once:true});
+  document.querySelector('.hero-video-play').addEventListener('click',()=>{
+    heroVideo.muted=true;
+    heroVideo.play().then(()=>heroPortrait.classList.remove('autoplay-blocked'))
+      .catch(()=>heroPortrait.classList.add('autoplay-blocked'));
+  });
+  window.addEventListener('pageshow',playHeroVideo);
+  document.addEventListener('visibilitychange',playHeroVideo);
+  playHeroVideo();
+}
+
 const treatmentGallery=document.querySelector('.treatment-gallery');
 const galleryLightbox=document.querySelector('.gallery-lightbox');
 if(treatmentGallery&&galleryLightbox){
