@@ -238,3 +238,55 @@ html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
   .mobile-cta span{font-size:inherit}
 }
 @media(prefers-reduced-motion:reduce){.hero-portrait video{opacity:1}}
+
+/* Longer editorial landing flow: signature design, concerns, FAQ and visit details. */
+.approach-intro{display:grid;grid-template-columns:1.2fr .55fr;gap:8%;align-items:end;padding:70px 0 52px}
+.approach-intro h2,.concerns-heading h2,.faq-heading h2,.recommend-content h2,.visit-card h2{font-family:'Noto Serif KR','Playfair Display',serif;font-size:clamp(40px,6vw,76px);line-height:1.08;letter-spacing:-.075em;font-weight:300;margin:0}
+.approach-intro h2 em,.faq-heading h2 em,.recommend-content h2 em{font-family:'Noto Serif KR','Playfair Display',serif;font-style:normal;color:#77766f}
+.approach-intro>p,.concerns-heading>p,.faq-heading>p,.visit-card>div>p:not(.eyebrow){font-size:13px;line-height:1.9;color:#6f6e68;margin:0}
+.approach-points{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.approach-points article{padding:24px 26px 14px 0;border-right:1px solid var(--line)}
+.approach-points article+article{padding-left:26px}.approach-points article:last-child{border:0}
+.approach-points article>span{font:13px 'Playfair Display',serif;color:#99978f}
+.approach-points h3{font-size:17px;letter-spacing:-.04em;margin:22px 0 8px}
+.approach-points p{font-size:11px;line-height:1.8;color:#77766f;margin:0}
+.concerns.section-pad{max-width:none;background:#171715;color:#f7f6f2;padding-left:max(8.3%,calc((100vw - 1200px)/2));padding-right:max(8.3%,calc((100vw - 1200px)/2))}
+.concerns .section-heading{border-color:#52514d;color:#aaa9a3}.concerns .section-heading .eyebrow{color:#f7f6f2}
+.concerns-heading{display:grid;grid-template-columns:1fr .55fr;gap:8%;align-items:end;padding:70px 0 38px}
+.concerns-heading h2{font-size:clamp(40px,6vw,74px)}
+.concerns-heading>p{color:#c2c1bb}
+.concerns-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #575650;border-left:1px solid #575650}
+.concerns-list p{min-height:86px;display:flex;align-items:center;margin:0;padding:20px 24px;border-right:1px solid #575650;border-bottom:1px solid #575650;color:#e2e1dc;font-size:13px}
+.concerns-list p::before{content:'—';font-family:'Playfair Display',serif;color:#b8a985;margin-right:18px}
+.concerns-foot{margin:28px 0 0;color:#c7c6bf;font-family:'Noto Serif KR',serif;font-size:17px}
+.faq-heading{display:grid;grid-template-columns:1fr .48fr;gap:8%;align-items:end;padding:68px 0 34px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{position:relative;cursor:pointer;list-style:none;padding:22px 48px 22px 0;font-size:15px;font-weight:500;letter-spacing:-.025em}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font:25px 'DM Sans',sans-serif;font-weight:300;color:#87867f;transition:transform .2s}
+.faq-list details[open] summary::after{content:'−';transform:translateY(-50%) rotate(180deg)}
+.faq-list details p{max-width:760px;margin:-4px 0 24px;color:#72716b;font-size:12px;line-height:1.9}
+.recommend-content{display:grid;grid-template-columns:1fr .78fr;gap:10%;align-items:center;padding:68px 0 8px}
+.recommend-content h2{font-size:clamp(39px,5.7vw,70px)}
+.recommend-content ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.recommend-content li{position:relative;padding:16px 0 16px 26px;border-bottom:1px solid var(--line);font-size:12px;color:#54534e}
+.recommend-content li::before{content:'✓';position:absolute;left:0;color:#9a8b68}
+.visit-card{display:grid;grid-template-columns:.8fr 1fr;gap:8%;padding:55px 6%;margin-top:58px;background:#1b1b19;color:#fff}
+.visit-card h2{margin-top:15px;font-size:clamp(42px,5vw,68px)}
+.visit-card>div>p:not(.eyebrow){color:#c4c3bd}
+.visit-details{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid #55544e;border-bottom:1px solid #55544e;padding:17px 0;margin:22px 0}
+.visit-details>div{display:grid;gap:5px}.visit-details span{font-size:8px;letter-spacing:.16em;color:#aaa9a2}.visit-details b{font-size:11px;font-weight:400;color:#eeede8}
+.visit-booking{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:0 16px;background:#f5f4f0;color:#171715;font-size:11px}
+@media(max-width:650px){
+  .approach-intro,.concerns-heading,.faq-heading,.recommend-content,.visit-card{grid-template-columns:1fr;gap:22px}
+  .approach-intro,.concerns-heading,.faq-heading,.recommend-content{padding:48px 0 28px}
+  .approach-intro>p,.concerns-heading>p,.faq-heading>p{max-width:420px;font-size:12px}
+  .approach-points{grid-template-columns:1fr;border-top:0}
+  .approach-points article,.approach-points article+article{display:grid;grid-template-columns:34px 1fr;column-gap:10px;padding:16px 0;border:0;border-top:1px solid var(--line)}
+  .approach-points article>span{grid-row:span 2;padding-top:4px}.approach-points h3{font-size:15px;margin:0 0 4px}.approach-points p{grid-column:2}
+  .concerns.section-pad{padding-left:7%;padding-right:7%}.concerns-list p{min-height:76px;padding:15px 12px;font-size:10px;line-height:1.7}.concerns-list p::before{margin-right:9px}.concerns-foot{font-size:14px;line-height:1.7}
+  .faq-list summary{font-size:13px;padding:18px 40px 18px 0}.faq-list details p{font-size:11px}
+  .recommend-content h2{font-size:clamp(37px,10vw,54px)}.recommend-content ul{margin-top:8px}.recommend-content li{font-size:11px;padding:14px 0 14px 23px}
+  .visit-card{padding:32px 7%;margin-top:38px}.visit-card h2{font-size:47px}.visit-details{gap:10px}.visit-details b{font-size:10px}
+}
