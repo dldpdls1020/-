@@ -192,7 +192,7 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 .offer-price{padding:28px 30px;border:1px solid #585853;background:#1d1d1b}
 .offer-regular{display:flex;align-items:center;gap:10px;color:#b6b5af;font-size:12px}
 .offer-regular del{font-family:'Playfair Display',Georgia,serif;font-size:19px;color:#c3c2bc}
-.offer-price>strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(52px,7vw,78px);font-weight:400;line-height:1.1;letter-spacing:-.06em;margin-top:5px}
+.offer-price>strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(52px,7vw,78px);font-weight:400;line-height:1.1;letter-spacing:-.06em;margin-top:5px;margin-bottom:22px}
 /* A restrained champagne accent keeps the monochrome offer editorial while making the price easy to scan. */
 .offer-price>strong{color:#d8c9a8}
 html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
@@ -227,7 +227,7 @@ html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
   .offer-inner{grid-template-columns:1fr;gap:24px}
   .offer-copy h2{font-size:clamp(28px,8.5vw,38px)}
   .offer-price{padding:22px 20px}
-  .offer-price>strong{font-size:60px}
+  .offer-price>strong{font-size:60px;margin-bottom:20px}
   .offer-actions a{font-size:9px}
   .works.section-pad,.process.section-pad,.director.section-pad{padding-top:66px;padding-bottom:66px}
   .contact{padding:64px 7% 106px}
