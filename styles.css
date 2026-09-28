@@ -192,13 +192,13 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 .offer-price{padding:28px 30px;border:1px solid #585853;background:#1d1d1b}
 .offer-regular{display:flex;align-items:center;gap:10px;color:#b6b5af;font-size:12px}
 .offer-regular del{font-family:'Playfair Display',Georgia,serif;font-size:19px;color:#c3c2bc}
-.offer-price>strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(52px,7vw,78px);font-weight:400;line-height:1.1;letter-spacing:-.06em;margin-top:5px;margin-bottom:22px}
+.offer-price>strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(52px,7vw,78px);font-weight:400;line-height:1.1;letter-spacing:-.06em;margin-top:5px}
 /* A restrained champagne accent keeps the monochrome offer editorial while making the price easy to scan. */
 .offer-price>strong{color:#d8c9a8}
 html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
 .offer-audience{display:block;color:#d1d0cb;font-size:11px;letter-spacing:.04em}
 .offer-fineprint{font-size:10px;color:#a9a8a2;line-height:1.7;margin:16px 0}
-.offer-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.offer-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:24px}
 .offer-actions a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:43px;padding:0 9px;border:1px solid #8c8c86;font-size:10px;white-space:nowrap;transition:background .2s,color .2s}
 .offer-actions a:first-child{background:#f5f4f0;border-color:#f5f4f0;color:#151514}
 .offer-actions a:hover{background:#fff;color:#111}
@@ -227,7 +227,8 @@ html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
   .offer-inner{grid-template-columns:1fr;gap:24px}
   .offer-copy h2{font-size:clamp(28px,8.5vw,38px)}
   .offer-price{padding:22px 20px}
-  .offer-price>strong{font-size:60px;margin-bottom:20px}
+  .offer-price>strong{font-size:60px}
+  .offer-actions{padding-top:24px}
   .offer-actions a{font-size:9px}
   .works.section-pad,.process.section-pad,.director.section-pad{padding-top:66px;padding-bottom:66px}
   .contact{padding:64px 7% 106px}
