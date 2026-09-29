@@ -203,6 +203,20 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 /* A restrained champagne accent keeps the monochrome offer editorial while making the price easy to scan. */
 .offer-price>strong{color:#d8c9a8}
 html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
+html:not([lang="ko"]) .offer-price{display:none}
+.foreign-service-card{display:none}
+html:not([lang="ko"]) .foreign-service-card{display:block;grid-column:2;grid-row:1;padding:24px 26px;border:1px solid #585853;background:#1d1d1b}
+.foreign-service-card h3{margin:0 0 16px;font-size:15px;font-weight:500;letter-spacing:.02em}
+.foreign-service-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.foreign-service-grid>div{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #42423e;font-size:11px;color:#d0cfca}
+.foreign-service-grid strong{white-space:nowrap;color:#d8c9a8;font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:400}
+.foreign-service-terms{margin-top:14px;color:#c6c5bf;font-size:10px;line-height:1.7}
+.foreign-service-terms p{margin:0 0 8px}
+.foreign-service-terms p strong{display:block;color:#fff;font-size:11px;font-weight:500}
+.foreign-service-terms ul{margin:0;padding-left:15px}
+.foreign-service-terms li{margin:3px 0}
+.foreign-service-terms small{display:block;margin-top:10px;color:#92918b;font-size:9px}
+.foreign-service-actions{margin-top:16px}
 .offer-audience{display:block;color:#d1d0cb;font-size:11px;letter-spacing:.04em}
 .offer-fineprint{font-size:10px;color:#a9a8a2;line-height:1.7;margin:16px 0}
 .offer-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:24px}
@@ -232,6 +246,10 @@ html[lang="ko"] .offer-foreign,html[lang="ko"] .offer-fineprint{display:none}
   .signature-quick strong{font-size:30px;min-width:44px}
   .offer{padding:48px 7% 82px}
   .offer-inner{grid-template-columns:1fr;gap:24px}
+  html:not([lang="ko"]) .foreign-service-card{grid-column:auto;grid-row:auto;padding:20px 18px}
+  .foreign-service-grid{gap:0 14px}
+  .foreign-service-grid>div{font-size:10px}
+  .foreign-service-grid strong{font-size:14px}
   .offer-copy h2{font-size:clamp(28px,8.5vw,38px)}
   .offer-price{padding:22px 20px}
   .offer-price>strong{font-size:60px}
