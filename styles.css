@@ -368,14 +368,21 @@ html,body{overflow-x:clip}
 
 /* Make the two event booking choices visibly bounce to invite a tap. */
 @keyframes event-booking-bounce{
-  0%,48%,100%{transform:translateY(0) scale(1)}
-  12%{transform:translateY(-14px) scale(1.05)}
-  24%{transform:translateY(0) scale(.99)}
-  34%{transform:translateY(-7px) scale(1.025)}
-  43%{transform:translateY(0) scale(1)}
+  0%,48%,100%{transform:translateY(0)}
+  12%{transform:translateY(-14px)}
+  24%{transform:translateY(0)}
+  34%{transform:translateY(-7px)}
+  43%{transform:translateY(0)}
 }
 .offer-price .offer-actions a{animation:event-booking-bounce 1.8s ease-in-out infinite}
 .offer-price .offer-actions a:nth-child(2){animation-delay:.35s}
 @media(prefers-reduced-motion:reduce){
   .offer-price .offer-actions a{animation:event-booking-bounce 1.8s ease-in-out infinite!important}
+}
+.offer-price .offer-actions{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.offer-price .offer-actions a{min-width:0;padding:0 8px;font-size:13px;white-space:normal;gap:7px}
+.offer-price .offer-actions a span{min-width:0;text-align:center;line-height:1.4}
+@media(max-width:650px){
+  .offer-price .offer-actions{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+  .offer-price .offer-actions a{min-height:54px;padding:0 5px;font-size:12px;gap:5px}
 }
