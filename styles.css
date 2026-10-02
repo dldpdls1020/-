@@ -338,3 +338,6 @@ html:not([lang="ko"]) .foreign-service-card{display:block;grid-column:2;grid-row
   .recommend-content h2{font-size:clamp(37px,10vw,54px)}.recommend-content ul{margin-top:8px}.recommend-content li{font-size:11px;padding:14px 0 14px 23px}
   .visit-card{padding:32px 7%;margin-top:38px}.visit-card h2{font-size:47px}.visit-details{gap:10px}.visit-details b{font-size:10px}
 }
+
+/* Full-bleed photo sections may extend to the viewport edge; keep that bleed from widening the page. */
+html,body{overflow-x:clip}
