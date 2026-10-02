@@ -365,3 +365,16 @@ html,body{overflow-x:clip}
   .visit-booking,
   .mobile-cta-actions a:first-child{animation:none}
 }
+
+/* Make the two event booking choices visibly bounce to invite a tap. */
+@keyframes event-booking-bounce{
+  0%,52%,100%{transform:translateY(0)}
+  10%{transform:translateY(-8px)}
+  20%{transform:translateY(0)}
+  30%{transform:translateY(-4px)}
+  40%{transform:translateY(0)}
+}
+.offer-price .offer-actions a{animation:event-booking-bounce 2.2s ease-in-out infinite}
+.offer-price .offer-actions a:nth-child(2){animation-delay:.28s}
+.offer-price .offer-actions a:hover{animation-play-state:paused;transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){.offer-price .offer-actions a{animation:none}}
