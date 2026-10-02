@@ -13,10 +13,10 @@ const copy = {
   }
 };
 
-Object.assign(copy.ko,{contactText:'전화·카카오채널·네이버 예약 중 편한 방법으로 문의해 주세요.',bookingCall:'전화로 예약 문의',kakaoInquiry:'카카오채널 문의',naverBooking:'네이버 예약 바로가기',mobileCta:'전화로 예약 문의',footerNotice:'부산 · 전화 010-7597-8444'});
-Object.assign(copy.ja,{contactText:'お電話、Kakaoチャンネル、Naver予約からお問い合わせください。',bookingCall:'電話で予約する',kakaoInquiry:'Kakaoチャンネルで相談',naverBooking:'Naver予約はこちら',mobileCta:'電話で予約する',footerNotice:'釜山 · 電話 010-7597-8444'});
-Object.assign(copy['zh-TW'],{contactText:'歡迎透過電話、Kakao頻道或 Naver 預約聯絡我們。',bookingCall:'電話預約',kakaoInquiry:'Kakao 頻道諮詢',naverBooking:'前往 Naver 預約',mobileCta:'電話預約',footerNotice:'釜山 · 電話 010-7597-8444'});
-Object.assign(copy.en,{contactText:'Contact us by phone, Kakao Channel, or Naver Booking.',bookingCall:'Call to book',kakaoInquiry:'Kakao Channel enquiry',naverBooking:'Book on Naver',mobileCta:'Call to book',footerNotice:'Busan · Phone 010-7597-8444'});
+Object.assign(copy.ko,{contactText:'전화·카카오채널·네이버 예약 중 편한 방법으로 문의해 주세요.',bookingCall:'전화로 예약 문의',kakaoInquiry:'카카오채널 문의',naverBooking:'네이버 예약 바로가기',mobileCta:'전화로 예약 문의',mobileBookingPrompt:'네이버 예약 · 카카오 상담',footerNotice:'부산 · 전화 010-7597-8444'});
+Object.assign(copy.ja,{contactText:'お電話、Kakaoチャンネル、Naver予約からお問い合わせください。',bookingCall:'電話で予約する',kakaoInquiry:'Kakaoチャンネルで相談',naverBooking:'Naver予約はこちら',mobileCta:'電話で予約する',mobileBookingPrompt:'予約・お問い合わせ',footerNotice:'釜山 · 電話 010-7597-8444'});
+Object.assign(copy['zh-TW'],{contactText:'歡迎透過電話、Kakao頻道或 Naver 預約聯絡我們。',bookingCall:'電話預約',kakaoInquiry:'Kakao 頻道諮詢',naverBooking:'前往 Naver 預約',mobileCta:'電話預約',mobileBookingPrompt:'快速預約・諮詢',footerNotice:'釜山 · 電話 010-7597-8444'});
+Object.assign(copy.en,{contactText:'Contact us by phone, Kakao Channel, or Naver Booking.',bookingCall:'Call to book',kakaoInquiry:'Kakao Channel enquiry',naverBooking:'Book on Naver',mobileCta:'Call to book',mobileBookingPrompt:'Quick booking · enquiry',footerNotice:'Busan · Phone 010-7597-8444'});
 Object.assign(copy.ko,{navProcess:'시술 과정',quickDesign:'1:1 맞춤 디자인',book:'네이버 예약'});
 Object.assign(copy.ja,{navProcess:'施術の流れ',quickDesign:'一人ひとりに合わせたデザイン',book:'Naverで予約'});
 Object.assign(copy['zh-TW'],{navProcess:'服務流程',quickDesign:'一對一量身設計',book:'Naver 預約'});

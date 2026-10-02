@@ -307,6 +307,25 @@ html:not([lang="ko"]) .foreign-service-card{display:block;grid-column:2;grid-row
 .visit-details{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid #55544e;border-bottom:1px solid #55544e;padding:17px 0;margin:22px 0}
 .visit-details>div{display:grid;gap:5px}.visit-details span{font-size:8px;letter-spacing:.16em;color:#aaa9a2}.visit-details b{font-size:11px;font-weight:400;color:#eeede8}
 .visit-booking{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:0 16px;background:#f5f4f0;color:#171715;font-size:11px}
+
+/* Make booking the clearest next step, following the reference site's repeated reservation prompts. */
+.site-header .header-book{background:#d8c9a8;border:1px solid #d8c9a8;color:#171715;padding:10px 17px;font-weight:700;box-shadow:0 5px 18px #0002}
+.site-header .header-book:hover{opacity:1;background:#eadfc8;border-color:#eadfc8;transform:translateY(-1px)}
+.booking-primary{min-height:52px;padding:0 22px;font-weight:700;box-shadow:0 8px 24px #0003}
+.hero-actions .booking-primary{font-size:12px}
+.offer-actions a:first-child,.contact-actions .contact-primary,.visit-booking{font-weight:700;box-shadow:0 7px 18px #0002}
+.mobile-cta-label{display:none}
+@media(max-width:650px){
+  .site-header .header-book{padding:8px 12px;font-size:10px;box-shadow:0 4px 14px #0003}
+  .hero-actions .booking-primary{min-height:48px;font-size:11px}
+  .mobile-cta{display:block;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:9px 10px 10px;border:1px solid #d5d1c6;border-radius:8px;background:#f5f4f0;color:#171715;box-shadow:0 8px 30px #0004}
+  .mobile-cta-label{display:block;margin:0 0 7px;text-align:center;font-size:10px;font-weight:700;letter-spacing:.08em;color:#4c4b45}
+  .mobile-cta-actions{display:grid;grid-template-columns:1.15fr 1fr;gap:7px}
+  .mobile-cta-actions a{height:52px;display:flex;align-items:center;justify-content:center;gap:7px;background:#171715;color:#fff;border:1px solid #171715;font-size:11px;font-weight:700;letter-spacing:0;box-shadow:none}
+  .mobile-cta-actions a:first-child{background:#d8c9a8;color:#171715;border-color:#d8c9a8}
+  .mobile-cta-actions a span{font-size:inherit}
+  .mobile-cta-actions a>b{font-size:15px;font-weight:400}
+}
 @media(max-width:650px){
   .approach-intro,.concerns-heading,.faq-heading,.recommend-content,.visit-card{grid-template-columns:1fr;gap:22px}
   .approach-intro,.concerns-heading,.faq-heading,.recommend-content{padding:48px 0 28px}
