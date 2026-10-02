@@ -1,3 +1,14 @@
+const navigationEntry=performance.getEntriesByType('navigation')[0];
+const isPageReload=navigationEntry?.type==='reload';
+if(isPageReload){
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  if(location.hash)history.replaceState(null,'',location.pathname+location.search);
+  window.addEventListener('pageshow',()=>{
+    document.documentElement.style.scrollBehavior='auto';
+    window.scrollTo(0,0);
+  },{once:true});
+}
+
 const copy = {
   ko: {
     navSignature:'시그니처',navWorks:'시술 결과',navDirector:'원장 소개',navVisit:'오시는 길',navProcess:'시술 과정',quickDesign:'1:1 맞춤 디자인',book:'네이버 예약',heroKicker:'BUSAN · KOREA',heroTopRight:'PERSONAL BROW DESIGN STUDIO',heroCaption:'당신의 인상에 오래 어울리는 디자인',heroEyebrow:'BEAUTY, IN YOUR OWN BALANCE',heroTitle:'나답게 선명해지는 아름다움.',heroText:'얼굴의 균형과 표정을 살펴, 지금의 나에게 자연스럽게 어울리는 눈썹을 디자인합니다.',discover:'뷰티데이트 알아보기',heroBottomLeft:'SUYEON CHO · DIRECTOR',introMeta:'A thoughtful approach to semi-permanent beauty',introTitle:'조용하지만 분명하게, 당신다운 아름다움.',introText:'뷰티데이트는 유행하는 모양을 그대로 따르기보다, 얼굴형과 눈매, 기존 눈썹의 결을 세심하게 살펴 한 사람에게 어울리는 균형을 찾습니다.',ourApproach:'우리의 디자인 방식',featureQuote:'“좋은 디자인은 당신의 얼굴에 원래 있었던 것처럼.”',featureNote:'1:1 상담부터 디자인 확인, 시술 후 안내까지 조수연 원장이 함께합니다.',consult:'맞춤 상담 문의',worksMeta:'A collection of real brow designs',worksTitle:'작은 결의 차이가 전체 인상을 바꿉니다.',worksText:'실제 고객의 시술 결과를 살펴보세요. 피부와 기존 눈썹에 따라 결과는 달라질 수 있습니다.',galleryCaption1:'SOFT & NATURAL',galleryCaption2:'BALANCED ARCH',galleryCaption3:'A NATURAL FINISH',galleryFootnote:'사진은 실제 시술 사례입니다. 고객의 사진 사용 동의를 받은 뒤 게시해 주세요.',processMeta:'Considered at every step',processTitle:'서두르지 않고, 함께 완성합니다.',step1Title:'상담',step1Text:'원하는 분위기와 현재 눈썹 상태, 피부 컨디션을 먼저 확인합니다.',step2Title:'디자인 확인',step2Text:'얼굴의 비율과 눈매에 맞춰 디자인하고, 시술 전 충분히 조율합니다.',step3Title:'섬세한 시술',step3Text:'확정한 디자인을 바탕으로 차분하게 시술을 진행합니다.',step4Title:'사후 안내',step4Text:'시술 후 관리 방법과 리터치 관련 내용을 안내해 드립니다.',directorMeta:'Beautydate, Busan',directorEyebrow:'DIRECTOR · SUYEON CHO',directorTitle:'12년의 경험, 한 사람을 위한 디자인.',directorText:'반영구 시술 12년, 샵 운영 8년의 경험을 바탕으로 고객 한 분 한 분의 얼굴에 어울리는 디자인을 고민합니다. 충분히 듣고, 함께 확인하고, 세심하게 마무리합니다.',yearsService:'YEARS OF EXPERIENCE',yearsStudio:'YEARS OF STUDIO',studioMeta:'A calm space, just for you',studioTitle:'편안한 마음으로 머무는 곳.',visitMeta:'We look forward to meeting you',visitTitle:'부산에서 만나요.',visitText:'정확한 주소와 운영 시간, 찾아오시는 방법을 확인해 업데이트할 예정입니다.',addressLabel:'ADDRESS',addressPending:'부산 · 상세 주소 업데이트 예정',hoursLabel:'HOURS',hoursPending:'운영 시간 확인 후 업데이트 예정',contactTitle:'나에게 어울리는 디자인, 함께 이야기해요.',contactText:'전화·카카오채널·네이버 예약 중 편한 방법으로 문의해 주세요.',bookingPending:'예약 링크 업데이트 예정',channelPending:'카카오톡 상담 링크 업데이트 예정',footerName:'뷰티데이트 · 조수연 원장',footerNotice:'부산 · 상세 사업자 및 연락처 정보 업데이트 예정',backTop:'맨 위로 ↑',mobileCta:'네이버 예약',description:'부산 뷰티데이트. 조수연 원장의 1:1 맞춤 눈썹 반영구 디자인과 시술 포트폴리오를 만나보세요.'
