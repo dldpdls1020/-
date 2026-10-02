@@ -345,3 +345,23 @@ html:not([lang="ko"]) .foreign-service-card{display:block;grid-column:2;grid-row
 
 /* Full-bleed photo sections may extend to the viewport edge; keep that bleed from widening the page. */
 html,body{overflow-x:clip}
+
+/* A quiet breathing highlight keeps the primary booking action easy to spot. */
+@keyframes booking-breathe{
+  0%,100%{box-shadow:0 5px 18px #0002}
+  50%{box-shadow:0 8px 25px #0004}
+}
+.site-header .header-book,
+.hero-actions .booking-primary,
+.offer-actions a:first-child,
+.contact-actions .contact-primary,
+.visit-booking,
+.mobile-cta-actions a:first-child{animation:booking-breathe 3.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){
+  .site-header .header-book,
+  .hero-actions .booking-primary,
+  .offer-actions a:first-child,
+  .contact-actions .contact-primary,
+  .visit-booking,
+  .mobile-cta-actions a:first-child{animation:none}
+}
