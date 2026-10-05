@@ -43,6 +43,10 @@ Object.assign(copy.ko,{approachLabel:'01 — OUR DESIGN',approachMeta:'Designed 
 Object.assign(copy.ja,{approachLabel:'01 — デザイン',approachMeta:'お顔立ちに合わせたデザイン',approachTitle:'流行の形より、あなたに似合うバランス。',approachText:'顔立ちや目元、今ある眉の毛流れを見ながら、自然になじむデザインを探します。',approachOneTitle:'まずは丁寧にお話を聞き',approachOneText:'ご希望の雰囲気や普段のメイクを伺います。',approachTwoTitle:'一緒にデザインを確認し',approachTwoText:'施術前に眉の形を見て調整します。',approachThreeTitle:'落ち着いて仕上げます',approachThreeText:'確認したデザインに沿って丁寧に施術します。',concernsLabel:'02 — こんなお悩みは？',concernsMeta:'毎朝を少し心地よく',concernsTitle:'眉を描くたびに、気になることはありますか？',concernsText:'毎日の小さなお悩みから初めての施術への不安まで、お気軽にご相談ください。',concernOne:'左右の眉の形をそろえるのが難しい。',concernTwo:'足りない部分を描くと濃く見える。',concernThree:'毎朝眉を描く時間を少し減らしたい。',concernFour:'初めてなので似合う形がわからない。',concernsFoot:'ゆっくり相談しながら、お顔とお好みに合う形を一緒に探します。',faqMeta:'ご予約前にご確認ください',faqTitle:'ご予約前の疑問にお答えします。',faqText:'施術前にしっかり相談できます。気になることはご予約前にお問い合わせください。',faqOneQ:'施術前にデザインを確認できますか？',faqOneA:'カウンセリング後にデザインをご提案し、施術前に一緒に確認・調整します。',faqTwoQ:'施術結果は誰でも同じですか？',faqTwoA:'肌や自眉の状態によって仕上がりには個人差があります。',faqThreeQ:'予約方法を教えてください。',faqThreeA:'Naver予約またはKakaoチャンネルからご連絡ください。電話でもお問い合わせいただけます。',faqFourQ:'リタッチの条件と料金を教えてください。',faqFourA:'リタッチの期間と料金はご予約前にKakaoチャンネルでご確認ください。',recommendMeta:'こんな方におすすめ',recommendTitle:'まずはお気軽にご相談ください。',recommendOne:'顔立ちや目元に合う眉を見つけたい方',recommendTwo:'濃すぎる眉や不自然な印象が心配な方',recommendThree:'施術前に形を一緒に確認したい方',recommendFour:'初めてなので丁寧な説明を聞きたい方',visitMeta:'ご来店をお待ちしております',visitTitle:'釜山でお会いしましょう。',visitText:'詳しい住所と営業時間はご予約前にお問い合わせください。',addressLabel:'住所',addressPending:'釜山 · 詳細住所はお問い合わせください',hoursLabel:'営業時間',hoursPending:'営業時間はお問い合わせください',galleryFootnote:'実際の施術例です。仕上がりは肌や自眉の状態によって異なります。'});
 Object.assign(copy['zh-TW'],{approachLabel:'01 — 設計理念',approachMeta:'依照五官量身設計',approachTitle:'不追隨流行，只尋找適合你的眉型。',approachText:'仔細觀察臉型、眼神與原有眉毛走向，設計自然融入個人氣質的眉型。',approachOneTitle:'先聆聽你的想法',approachOneText:'了解你喜歡的感覺與平常的上妝習慣。',approachTwoTitle:'一起確認眉型',approachTwoText:'施作前先確認並調整眉型。',approachThreeTitle:'細心完成施作',approachThreeText:'依照確認過的設計細緻施作。',concernsLabel:'02 — 你也有這些困擾嗎？',concernsMeta:'讓每個早晨更從容',concernsTitle:'每次畫眉時，是否總有些在意的地方？',concernsText:'無論是每天的小困擾，或第一次施作前的不安，都歡迎輕鬆聊聊。',concernOne:'左右眉型總是很難畫得一致。',concernTwo:'補上空隙後，整體看起來太濃。',concernThree:'希望減少每天畫眉的時間。',concernFour:'第一次施作，不知道哪種眉型適合自己。',concernsFoot:'我們會先慢慢諮詢，一起找出符合臉型與喜好的方向。',faqMeta:'預約前值得了解的資訊',faqTitle:'預約前有疑問？先看看這裡。',faqText:'施作前會充分諮詢，也歡迎預約前先詢問任何問題。',faqOneQ:'施作前可以確認眉型嗎？',faqOneA:'諮詢後提出設計，並在施作前一起確認與調整。',faqTwoQ:'每個人的施作成果都一樣嗎？',faqTwoA:'成果會依膚況與原有眉毛狀態有所不同。',faqThreeQ:'如何預約？',faqThreeA:'請透過 Naver 預約或 Kakao 頻道聯絡，也可以來電詢問。',faqFourQ:'補色的條件與費用如何計算？',faqFourA:'補色期限與費用請在預約前透過 Kakao 頻道確認。',recommendMeta:'推薦給這樣的你',recommendTitle:'如果你也有這些想法，歡迎先來諮詢。',recommendOne:'想找到適合臉型與眼神的眉型',recommendTwo:'擔心眉毛太濃或不自然',recommendThree:'希望施作前一起確認眉型',recommendFour:'第一次體驗，希望先聽完整說明',visitMeta:'期待與你相見',visitTitle:'釜山見。',visitText:'詳細地址與營業時間，請於預約前洽詢。',addressLabel:'地址',addressPending:'釜山 · 詳細地址請洽詢',hoursLabel:'營業時間',hoursPending:'營業時間請洽詢',galleryFootnote:'照片為實際施作案例，成果會因膚況與原有眉毛狀態而異。'});
 Object.assign(copy.en,{approachLabel:'01 — OUR DESIGN',approachMeta:'Designed around your features',approachTitle:'Less about trends. More about your balance.',approachText:'We consider your face shape, eyes and natural brow pattern to find a design that feels like you.',approachOneTitle:'We start by listening',approachOneText:'Tell us about the look you want and your daily makeup routine.',approachTwoTitle:'We review the design together',approachTwoText:'We check and adjust your brow shape before treatment.',approachThreeTitle:'We finish with care',approachThreeText:'Your confirmed design guides a thoughtful treatment.',concernsLabel:'02 — DOES THIS FEEL FAMILIAR?',concernsMeta:'A little more ease, every morning',concernsTitle:'Does anything about your brows keep bothering you?',concernsText:'From small everyday frustrations to first-time treatment concerns, feel free to talk them through with us.',concernOne:'It is hard to make both brows look alike.',concernTwo:'Filling sparse areas makes my brows look too dark.',concernThree:'I would like to spend less time drawing my brows each day.',concernFour:'It is my first time and I do not know what shape suits me.',concernsFoot:'We take time to talk and find a direction that suits your features and preferences.',faqMeta:'Good to know before booking',faqTitle:'A few questions before you book.',faqText:'We will talk through your preferences before treatment. Ask us anything before booking.',faqOneQ:'Can I review the design before treatment?',faqOneA:'After a consultation, we suggest a design and review and adjust it together before treatment.',faqTwoQ:'Will everyone get the same result?',faqTwoA:'Results can vary depending on skin and natural brow conditions.',faqThreeQ:'How can I make a booking?',faqThreeA:'Contact us through Naver Booking or Kakao Channel. You can also call us.',faqFourQ:'What are the retouch terms and price?',faqFourA:'Please confirm the retouch period and price through Kakao Channel before booking.',recommendMeta:'Who this may suit',recommendTitle:'If this sounds like you, start with a conversation.',recommendOne:'You want brows that suit your face and eyes.',recommendTwo:'You are concerned about brows looking too dark or unnatural.',recommendThree:'You would like to review the shape before treatment.',recommendFour:'You are new to brow treatments and want a clear explanation.',visitMeta:'We look forward to meeting you',visitTitle:'Meet us in Busan.',visitText:'Please contact us before booking for the full address and hours.',addressLabel:'ADDRESS',addressPending:'Busan · Please ask us for the address',hoursLabel:'HOURS',hoursPending:'Please contact us for current hours',galleryFootnote:'Real treatment examples. Results may vary with skin and natural brow conditions.'});
+Object.assign(copy.ko,{filmLabel:'CONSULTATION · TREATMENT',filmTitle:'상담부터 시술까지, 편안한 흐름으로.',filmText:'충분히 이야기를 나누고, 차분하게 시술을 진행합니다.'});
+Object.assign(copy.ja,{filmLabel:'CONSULTATION · TREATMENT',filmTitle:'カウンセリングから施術まで、心地よい流れで。',filmText:'じっくりお話を伺い、落ち着いて施術を進めます。'});
+Object.assign(copy['zh-TW'],{filmLabel:'CONSULTATION · TREATMENT',filmTitle:'從諮詢到施作，細心而從容。',filmText:'充分溝通後，再以細緻的步調進行施作。'});
+Object.assign(copy.en,{filmLabel:'CONSULTATION · TREATMENT',filmTitle:'From consultation to treatment, with care.',filmText:'We take time to listen, then move through each step calmly.'});
 const names={'ko':'KO','ja':'日本語','zh-TW':'繁體','en':'EN'};
 const langButtons=[...document.querySelectorAll('[data-lang]')];
 document.querySelectorAll('.offer-price .offer-actions a').forEach((button,index)=>{
@@ -236,4 +240,41 @@ if ('IntersectionObserver' in window) {
     entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
   }, { threshold: 0.16, rootMargin: '-6% 0px -8% 0px' });
   revealItems.forEach(item => revealObserver.observe(item));
+}
+
+const designFilm=document.querySelector('[data-design-film]');
+if(designFilm){
+  const clips=[...designFilm.querySelectorAll('video')];
+  const caption=designFilm.parentElement.querySelector('[data-film-caption]');
+  let currentClip=0,filmTimer=null,filmVisible=false;
+  const clipLabels=['01\u00a0 / \u00a0CONSULTATION','02\u00a0 / \u00a0TREATMENT'];
+  const pauseFilm=()=>{clearTimeout(filmTimer);filmTimer=null;clips.forEach(clip=>clip.pause())};
+  const playCurrent=()=>{
+    if(!filmVisible||document.hidden)return;
+    const active=clips[currentClip];
+    active.muted=true;
+    active.play().catch(()=>{});
+    clearTimeout(filmTimer);
+    filmTimer=setTimeout(()=>{
+      const outgoing=clips[currentClip];
+      const nextIndex=(currentClip+1)%clips.length;
+      const incoming=clips[nextIndex];
+      incoming.currentTime=0;
+      incoming.muted=true;
+      incoming.play().catch(()=>{});
+      incoming.classList.add('is-active');
+      outgoing.classList.remove('is-active');
+      currentClip=nextIndex;
+      if(caption)caption.textContent=clipLabels[currentClip];
+      filmTimer=setTimeout(()=>{outgoing.pause();playCurrent()},900);
+    },4500);
+  };
+  const setFilmVisible=visible=>{
+    filmVisible=visible;
+    if(visible)playCurrent();else pauseFilm();
+  };
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(entries=>setFilmVisible(entries[0].isIntersecting),{threshold:.2}).observe(designFilm);
+  }else setFilmVisible(true);
+  document.addEventListener('visibilitychange',()=>document.hidden?pauseFilm():filmVisible&&playCurrent());
 }
