@@ -76,7 +76,7 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 .hero-bottom{position:absolute;z-index:3;left:4.2%;right:4.2%;bottom:30px;padding:0;color:rgba(255,255,255,.78);text-shadow:0 1px 10px #0008}
 .hero-bottom a{font-size:8px}
 @media(max-width:900px){.hero-topline{top:87px;left:5%;right:5%}.hero-word{left:2%;top:21%;font-size:clamp(90px,20vw,190px)}.hero-message{right:6%;bottom:15%;width:42%;padding:0}.hero-caption{left:5%;bottom:16%}.hero-bottom{left:5%;right:5%;bottom:24px}}
-@media(max-width:650px){.site-header{height:60px;background:linear-gradient(180deg,rgba(0,0,0,.42),transparent)}.hero{height:100svh;min-height:680px}.hero-topline{top:82px;left:6%;right:6%;font-size:7px}.hero-portrait video{object-position:53% center}.hero-word{left:2%;top:20%;font-size:clamp(78px,21vw,150px);line-height:.75}.hero-message{left:7%;right:7%;top:auto;bottom:14%;width:auto;max-width:450px;padding:0;background:none}.hero-message .eyebrow{font-size:7px;margin-bottom:12px}.hero-message h2{font-size:clamp(40px,11vw,58px);margin-bottom:12px}.hero-message>p:not(.eyebrow){max-width:340px;font-size:11px;color:rgba(255,255,255,.9)}.hero-message .text-link{margin-top:8px}.hero-caption{left:auto;right:7%;top:auto;bottom:15%;writing-mode:vertical-rl;font-size:7px}.hero-bottom{left:6%;right:6%;bottom:20px;font-size:7px}.hero-bottom a{margin:0 auto}}
+@media(max-width:650px){.site-header{height:60px;background:linear-gradient(180deg,rgba(0,0,0,.42),transparent)}.hero{height:100svh;min-height:680px}.hero-topline{top:82px;left:6%;right:6%;font-size:7px}.hero-portrait .hero-slide{object-position:53% center}.hero-word{left:2%;top:20%;font-size:clamp(78px,21vw,150px);line-height:.75}.hero-message{left:7%;right:7%;top:auto;bottom:14%;width:auto;max-width:450px;padding:0;background:none}.hero-message .eyebrow{font-size:7px;margin-bottom:12px}.hero-message h2{font-size:clamp(40px,11vw,58px);margin-bottom:12px}.hero-message>p:not(.eyebrow){max-width:340px;font-size:11px;color:rgba(255,255,255,.9)}.hero-message .text-link{margin-top:8px}.hero-caption{left:auto;right:7%;top:auto;bottom:15%;writing-mode:vertical-rl;font-size:7px}.hero-bottom{left:6%;right:6%;bottom:20px;font-size:7px}.hero-bottom a{margin:0 auto}}
 @media(max-width:380px){.hero{min-height:620px}.hero-word{font-size:clamp(72px,20vw,96px);top:22%}.hero-message{bottom:15%;left:7%;right:8%;padding:0}.hero-message h2{font-size:38px}.hero-caption{right:5%;bottom:16%}}
 
 /* Keep the English brand mark clear of the portrait's face. */
@@ -155,10 +155,8 @@ body.motion-ready .hero-topline,body.motion-ready .hero-bottom,body.motion-ready
 .contact-actions a:hover{background:var(--paper);border-color:var(--paper);color:#111}
 .contact-actions a:hover>b{transform:translate(2px,-2px)}
 .mobile-cta a>span{font-size:inherit}.mobile-cta a>b{font-size:15px;font-weight:400}
-.hero-portrait video{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(100%) brightness(.68);opacity:1}
-.hero-portrait video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
-.hero-video-play{display:none;position:absolute;z-index:4;top:50%;left:50%;width:76px;height:76px;transform:translate(-50%,-50%);place-items:center;border:1px solid #ffffffa0;border-radius:50%;background:#1119;color:#fff;font-size:25px;cursor:pointer;backdrop-filter:blur(6px)}
-.hero-portrait.autoplay-blocked .hero-video-play{display:grid}
+.hero-portrait .hero-slide{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(100%) brightness(.68);opacity:0;transition:opacity 1.6s ease-in-out;will-change:opacity}
+.hero-portrait .hero-slide.is-active{opacity:1}
 
 /* Booking-first homepage: keep the video clean and make the next action obvious. */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -266,7 +264,8 @@ html:not([lang="ko"]) .foreign-service-card{display:block;grid-column:2;grid-row
   .mobile-cta a:first-child{background:#f5f4f0;color:#111;border:1px solid #111}
   .mobile-cta span{font-size:inherit}
 }
-@media(prefers-reduced-motion:reduce){.hero-portrait video{opacity:1}}
+@media(prefers-reduced-motion:reduce){.hero-portrait .hero-slide{transition-duration:.45s}}
+@media(max-width:650px){.hero-portrait .hero-slide{object-position:53% center}}
 
 /* Longer editorial landing flow: signature design, concerns, FAQ and visit details. */
 .approach-intro{display:grid;grid-template-columns:1.2fr .55fr;gap:8%;align-items:end;padding:70px 0 52px}

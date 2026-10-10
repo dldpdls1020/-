@@ -116,30 +116,23 @@ let savedLanguage='ko';
 try{savedLanguage=localStorage.getItem('beautydate-language')||'ko'}catch{}
 setLanguage(savedLanguage);
 
-const heroVideo=document.querySelector('.hero-portrait video');
-if(heroVideo){
-  const heroPortrait=heroVideo.closest('.hero-portrait');
-  const playHeroVideo=()=>{
-    if(document.visibilityState==='hidden')return;
-    heroVideo.muted=true;
-    heroVideo.defaultMuted=true;
-    heroVideo.playsInline=true;
-    const attempt=heroVideo.play();
-    if(attempt&&typeof attempt.then==='function'){
-      attempt.then(()=>heroPortrait.classList.remove('autoplay-blocked'))
-        .catch(()=>heroPortrait.classList.add('autoplay-blocked'));
-    }
+const heroSlides=[...document.querySelectorAll('.hero-portrait .hero-slide')];
+if(heroSlides.length>1){
+  let activeSlide=0,heroRotation=null;
+  const stopHeroRotation=()=>{clearInterval(heroRotation);heroRotation=null};
+  const startHeroRotation=()=>{
+    stopHeroRotation();
+    if(document.hidden)return;
+    heroRotation=setInterval(()=>{
+      heroSlides[activeSlide].classList.remove('is-active');
+      activeSlide=(activeSlide+1)%heroSlides.length;
+      heroSlides[activeSlide].classList.add('is-active');
+    },6500);
   };
-  heroVideo.addEventListener('playing',()=>heroPortrait.classList.remove('autoplay-blocked'));
-  heroVideo.addEventListener('canplay',playHeroVideo,{once:true});
-  document.querySelector('.hero-video-play').addEventListener('click',()=>{
-    heroVideo.muted=true;
-    heroVideo.play().then(()=>heroPortrait.classList.remove('autoplay-blocked'))
-      .catch(()=>heroPortrait.classList.add('autoplay-blocked'));
-  });
-  window.addEventListener('pageshow',playHeroVideo);
-  document.addEventListener('visibilitychange',playHeroVideo);
-  playHeroVideo();
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(entries=>entries[0].isIntersecting?startHeroRotation():stopHeroRotation(),{threshold:.1}).observe(document.querySelector('.hero'));
+  }else startHeroRotation();
+  document.addEventListener('visibilitychange',()=>document.hidden?stopHeroRotation():startHeroRotation());
 }
 
 const treatmentGallery=document.querySelector('.treatment-gallery');
