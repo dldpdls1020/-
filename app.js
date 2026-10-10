@@ -60,7 +60,7 @@ Object.assign(copy.ja,{heroOfferLabel:'眉アートメイクイベント'});
 Object.assign(copy['zh-TW'],{heroOfferLabel:'半永久眉毛活動'});
 Object.assign(copy.en,{heroOfferLabel:'BROW DESIGN EVENT'});
 Object.assign(copy.ko,{
-  heroTitle:'눈썹문신, 아직 망설이고 계신가요?',
+  heroTitle:'눈썹문신, 아직 고민 중이신가요?',
   heroText:'시술이 내 얼굴에 어울릴지, 조수연 원장과 먼저 상담해 보세요.',
   concernsLabel:'01 — 먼저, 이런 고민부터',concernsMeta:'처음이라면 걱정부터 편하게 나눠요',
   concernsTitle:'눈썹 하나 때문에, 아직 망설이고 계신가요?',
