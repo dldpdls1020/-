@@ -60,8 +60,8 @@ Object.assign(copy.ja,{heroOfferLabel:'眉アートメイクイベント'});
 Object.assign(copy['zh-TW'],{heroOfferLabel:'半永久眉毛活動'});
 Object.assign(copy.en,{heroOfferLabel:'BROW DESIGN EVENT'});
 Object.assign(copy.ko,{
-  heroTitle:'내 얼굴에 오래 남을 눈썹, 충분히 살펴보고 결정하세요.',
-  heroText:'눈썹이 내 얼굴에 어울릴지 고민된다면 조수연 원장과 먼저 이야기해 보세요.',
+  heroTitle:'눈썹문신, 아직 망설이고 계신가요?',
+  heroText:'시술이 내 얼굴에 어울릴지, 조수연 원장과 먼저 상담해 보세요.',
   concernsLabel:'01 — 먼저, 이런 고민부터',concernsMeta:'처음이라면 걱정부터 편하게 나눠요',
   concernsTitle:'눈썹 하나 때문에, 아직 망설이고 계신가요?',
   concernsText:'좌우가 달라 보이고, 빈 곳을 채우면 진해질까 걱정되고, 어떤 모양이 어울릴지 막막할 수 있어요.',
@@ -108,8 +108,8 @@ Object.assign(copy.ko,{
   contactText:'현재 눈썹과 원하는 분위기를 함께 살펴보고, 예약 전 궁금한 점도 안내해 드릴게요.'
 });
 Object.assign(copy.ja,{
-  heroTitle:'自分の顔に長く残る眉だから、じっくり相談して決めましょう。',
-  heroText:'似合う眉が分からなくても大丈夫です。チョ・スヨン院長にまずご相談ください。',
+  heroTitle:'眉の施術、まだ迷っていますか？',
+  heroText:'自分に似合うか気になったら、チョ・スヨン院長にご相談ください。',
   concernsLabel:'01 — こんなお悩みはありませんか',concernsMeta:'初めてなら、不安からお聞かせください',
   concernsTitle:'眉の施術を、まだ迷っていますか？',concernsText:'左右差や濃くなりすぎる不安、似合う形が分からない悩みもご相談ください。',
   concernOne:'左右の眉のバランスを整えるのが難しい。',concernTwo:'足りない部分を描くと濃く見えそうで心配。',concernThree:'毎朝眉を描く時間を減らしたい。',concernFour:'自分に似合う形が分からない。',
@@ -135,7 +135,7 @@ Object.assign(copy.ja,{
   contactTitle:'似合う形が分からなくても大丈夫、まずはご相談ください。',contactText:'今の眉とご希望を一緒に確認し、ご予約前の質問にもお答えします。'
 });
 Object.assign(copy['zh-TW'],{
-  heroTitle:'眉毛會陪伴你的臉很久，先仔細聊過再決定。',heroText:'還不確定什麼眉型適合自己嗎？先和趙秀妍院長聊聊。',
+  heroTitle:'還在猶豫要不要做眉毛嗎？',heroText:'想知道適不適合自己，可以先和趙秀妍院長聊聊。',
   concernsLabel:'01 — 你也有這些煩惱嗎',concernsMeta:'第一次施作，先聊聊你的不安',concernsTitle:'你也還在猶豫要不要做眉毛嗎？',concernsText:'左右不對稱、擔心顏色太深，或不知道什麼眉型適合，都可以先聊聊。',
   concernOne:'很難畫出左右平衡的眉毛。',concernTwo:'擔心補空隙後看起來太濃。',concernThree:'希望減少每天畫眉的時間。',concernFour:'不知道什麼形狀適合自己的臉。',concernsFoot:'我們會先聽聽你的煩惱，再一起確認是否需要施作。',
   approachLabel:'02 — BEAUTYDATE DESIGN',approachMeta:'趙秀妍院長一對一設計',approachTitle:'先看現在的臉部平衡，再談流行眉型。',approachText:'仔細觀察臉型、眼神與原有眉毛的走向，提出自然適合你的設計。',
@@ -153,7 +153,7 @@ Object.assign(copy['zh-TW'],{
   eventKicker:'BEAUTYDATE · EVENT',eventTitle:'半永久眉毛活動',eventIntro:'趙秀妍院長提供一對一諮詢，並在施作前一起確認眉型。',contactTitle:'還不知道什麼眉型適合也沒關係，先來聊聊。',contactText:'一起看看現在的眉毛與期待，也為你解答預約前的疑問。'
 });
 Object.assign(copy.en,{
-  heroTitle:'Brows stay with your face, so take time to choose.',heroText:'Not sure what suits you? Start with a conversation with director Suyeon Cho.',
+  heroTitle:'Still unsure about brow treatment?',heroText:'Ask director Suyeon Cho what may suit your features.',
   concernsLabel:'01 — DOES THIS SOUND FAMILIAR?',concernsMeta:'If it is your first time, start with your questions',concernsTitle:'Still unsure about getting your brows done?',concernsText:'Uneven brows, fear of a result that looks too dark, or not knowing what shape suits you are all good reasons to ask first.',
   concernOne:'It is hard to make both brows look balanced.',concernTwo:'I worry filling sparse areas will look too dark.',concernThree:'I would like to spend less time drawing my brows.',concernFour:'I do not know what shape suits my face.',concernsFoot:'We listen first, then talk through whether treatment is right for you.',
   approachLabel:'02 — BEAUTYDATE DESIGN',approachMeta:'One-to-one design with Suyeon Cho',approachTitle:'Start with your features, not a passing trend.',approachText:'We consider your face, eyes and natural brow pattern before suggesting a design that feels like you.',
