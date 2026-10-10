@@ -414,3 +414,5 @@ html,body{overflow-x:clip}
 .hero-actions{margin-top:12px}
 @media(max-width:650px){.hero-offer{gap:9px;margin-top:12px}.hero-offer span{font-size:9px}.hero-offer strong{font-size:27px}.hero-actions{margin-top:11px}}
 @media(max-width:380px){.hero-offer{margin-top:9px}.hero-offer strong{font-size:24px}}
+
+@media(max-width:650px){.contact{padding-bottom:58px}}
