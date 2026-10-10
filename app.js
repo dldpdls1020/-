@@ -55,6 +55,10 @@ Object.assign(copy.ko,{directorText:'안녕하세요. 조수연 원장입니다.
 Object.assign(copy.ja,{directorText:'チョ・スヨンです。アートメイク施術12年、Beautydateを運営して8年になります。さまざまなお顔に向き合う中で、誰にでも同じ形が似合うわけではないと学びました。顔立ちや目元、今ある眉を丁寧に見て、一緒にデザインを確認します。',recommendMeta:'ご予約前に確認したい4つのポイント'});
 Object.assign(copy['zh-TW'],{directorText:'我是趙秀妍。從事半永久眉施作12年，經營 Beautydate 至今8年。一路接觸不同的臉型後，我更確信同一種眉型不會適合每個人。我會仔細觀察臉型、眼神與原有眉毛，再和你一起確認設計。',recommendMeta:'預約前可以確認的四項重點'});
 Object.assign(copy.en,{directorText:'I am Suyeon Cho. I have 12 years of experience in semi-permanent brow treatment and have run Beautydate for 8 years. Meeting many different faces has taught me that one shape does not suit everyone. I take time to consider your features and natural brows, then review the design with you.',recommendMeta:'Four things to check before booking'});
+Object.assign(copy.ko,{heroOfferLabel:'반영구 눈썹 이벤트'});
+Object.assign(copy.ja,{heroOfferLabel:'眉アートメイクイベント'});
+Object.assign(copy['zh-TW'],{heroOfferLabel:'半永久眉毛活動'});
+Object.assign(copy.en,{heroOfferLabel:'BROW DESIGN EVENT'});
 const names={'ko':'KO','ja':'日本語','zh-TW':'繁體','en':'EN'};
 const langButtons=[...document.querySelectorAll('[data-lang]')];
 document.querySelectorAll('.offer-price .offer-actions a').forEach((button,index)=>{
